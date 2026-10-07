@@ -34,13 +34,3 @@ if r.status_code == 200:
     st.write(f"🎊 Your penguin is a: **{r.json()["prediction"]}** 🎊")
 else:
     st.write(f"There seems to be some issue... Status: {r.status_code} json: {r.json()}")
-
-url = api_url + f"/predict?island={island}"
-url += f"&bill_length_mm={bill_length}&bill_depth_mm={bill_depth}"
-url += f"&flipper_length_mm={flipper_length}&body_mass_g={body_mass}"
-url += f"&sex={gender}"
-st.write("Try it out:", url)
-
-st.write(f"""
-    More infos: {api_url}/docs
-""")
