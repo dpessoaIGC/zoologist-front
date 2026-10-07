@@ -16,9 +16,7 @@ flipper_length = st.slider('Flipper length (mm): ', 100, 500, step=50, value=206
 body_mass = st.slider('Body mass (g): ', 1500, 6000, step=500, value=3950)
 gender = st.selectbox("Gender: ", ("Male", "Female"))
 
-# api_url = "http://127.0.0.1:8000"
-api_url = "https://zoo-api-390650046032.europe-west1.run.app"
-
+api_url = st.secrets['API_URL']
 
 penguin_props = {
     "island": island,
